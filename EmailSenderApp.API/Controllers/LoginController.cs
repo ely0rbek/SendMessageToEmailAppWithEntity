@@ -1,12 +1,14 @@
 ﻿using EmailSenderApp.Application.Services.LoginServices;
 using EmailSenderApp.Domain.Entites.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
 namespace EmailSenderApp.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
+
     public class LoginController : ControllerBase
     {
         private readonly ILoginService _loginService;
@@ -16,11 +18,11 @@ namespace EmailSenderApp.API.Controllers
             _loginService = loginService;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> LoginAsync(BaseEmailModel model)
-        {
-            var result = await _loginService.LoginAsync(model);
-            return Ok(result);
-        }
+        //[HttpPost]
+        //public async Task<IActionResult> LoginAsync(BaseEmailModel model)
+        //{
+        //    var result = await _loginService.LoginAsync(model);
+        //    return Ok(result);
+        //}
     }
 }

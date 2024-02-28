@@ -1,4 +1,5 @@
-﻿using EmailSenderApp.Application.Services.CheckEmailCodeServices;
+﻿using EmailSenderApp.Application.Services.AutServices;
+using EmailSenderApp.Application.Services.CheckEmailCodeServices;
 using EmailSenderApp.Application.Services.LoginServices;
 using EmailSenderApp.Application.Services.RegisterServices;
 using EmailSenderApp.Infrastructure.Repositories.RegisterRepositories;
@@ -13,6 +14,7 @@ namespace EmailSenderApp.Application
             services.AddScoped<IRegisterService, RegisterService>();
             services.AddScoped<ILoginService, LoginService>();
             services.AddScoped<ICheckService, CheckService>();
+            services.AddScoped<IAuthService, AuthService>();
             return services;
         }
     }

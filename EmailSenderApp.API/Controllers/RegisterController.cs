@@ -15,11 +15,11 @@ namespace EmailSenderApp.API.Controllers
             _registerService = registerService;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddUserAsync(RegisterModel model)
-        {
-            var result = await _registerService.AddUserAsync(model);
-            return Ok(result);
-        }
+        //[HttpPost]
+        //public async Task<IActionResult> AddUserAsync(RegisterModel model)
+        //{
+        //    var result = await _registerService.AddUserAsync(model);
+        //    return Ok(result);
+        //}
     }
 }
